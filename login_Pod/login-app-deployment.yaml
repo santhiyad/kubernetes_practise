@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: login-app-deployment
+  labels:
+    name: login-app-deployment
+spec:
+  template:
+    metadata:
+      name: login-app-pod
+      labels:
+        name: login-app-pod
+    spec:
+      containers:
+        - name: login-app
+          image: santhiyad/simple_python_mysql_app_k8s
+          ports:
+            - containerPort: 80
+  replicas: 3
+  selector:
+    matchLabels:
+      name: login-app-pod

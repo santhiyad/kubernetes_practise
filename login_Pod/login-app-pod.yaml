@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: login-app-pod
+  labels:
+    name: login-app-pod
+spec:
+  containers:
+    - name: login-app
+      image: santhiyad/simple_python_mysql_app_k8s
+      ports:
+        - containerPort: 80

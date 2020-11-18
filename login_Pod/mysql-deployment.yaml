@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql-deployment
+  labels:
+    name: mysql-deployment
+spec:
+  template:
+    metadata:
+      name: mysql-app-pod
+      labels:
+        name: mysql-app-pod
+    spec:
+      containers:
+        - name: mysql
+          image: mysql
+          ports:
+            - containerPort: 3306
+          env:
+            - name: "MYSQL_ROOT_PASSWORD"
+              value: "Sant@wip08"
+            - name: "host"
+              value: "mysqlhost"
+  replicas: 3
+  selector:
+    matchLabels:
+      name: mysql-app-pod

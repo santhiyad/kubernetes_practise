@@ -1,0 +1,22 @@
+kubectl run -it --rm --image=mysql --restart=Never mysql-client -- mysql -u USERNAME -h HOSTNAME -p
+kubectl run -it --rm --image=mysql --restart=Never mysql-client -- mysql -u root -h mysql -pSant@wip08
+kubectl run -it --rm --image=mysql --restart=Never mysql-client -- mysql -u USERNAME -h HOSTNAME -p
+
+
+kubectl run -it --rm --image=mysql --restart=Never mysql-client -- mysql -h mysql -u root -pSant@wip08
+
+
+
+https://kubernetes.io/docs/tasks/run-application/run-single-instance-stateful-application/
+
+https://linoxide.com/containers/setup-mysql-kubernetes/
+
+kubectl run -it --rm --image=mysql --restart=Never mysql-client -- mysql  -u root -pSant@wip08
+
+
+kubernetes-mysql clog k8s-mysql
+ msg-api ctl exec -it k8s-mysql bash
+
+kubectl exec -it mysql-deployment-b8d5d6b67-54wls  /bin/bash
+mysql -u root -p 
+kubectl logs -f  pod/login-app-deployment-8697f9b79f-9zg54
