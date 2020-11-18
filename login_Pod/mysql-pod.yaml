@@ -14,4 +14,4 @@ spec:
         - name: "MYSQL_ROOT_PASSWORD"
           value: "Sant@wip08"
         - name: "host"
-          value: "mysqlhost"
+          value: "mysql-service"

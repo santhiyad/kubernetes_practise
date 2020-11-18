@@ -1,0 +1,54 @@
+<style>
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid grey;
+    padding: 100px;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .button {
+    padding: 10px 0;
+    margin: 10px auto;
+    background-color: aliceblue;
+    cursor: pointer;
+    font-size: 14px;
+    width: 150px;
+  }
+
+  .button:hover {
+    opacity: 0.7;
+  }
+
+  label {
+    margin-right: 10px;
+  }
+</style>
+<div class="container">
+  <form class="content" method="POST">
+    <div class="row">
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" />
+    </div>
+
+    <div class="row">
+      <label for="passwd">Password</label>
+      <input type="password" name="passwd" />
+    </div>
+
+    <button class="button" type="submit">Submit</button>
+  </form>
+</div>
